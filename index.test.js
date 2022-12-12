@@ -16,15 +16,15 @@ let testData = {
     roomNumber: 3
   }
 
-  //checking to see if jest is setup
-test('test function', () => {
-  expect(2).toBe(2)
-})
+//   //checking to see if jest is setup
+// test('test function', () => {
+//   expect(2).toBe(2)
+// })
 
-//checking to see if we can access our data
-test('first name should be patten', () => {
-  expect(testData.firstName).toBe('Patten')
-})
+// //checking to see if we can access our data
+// test('first name should be patten', () => {
+//   expect(testData.firstName).toBe('Patten')
+// })
 
 //describe block to group tests for formatTitle function
 describe('formatTitle tests', () => {
@@ -34,6 +34,14 @@ describe('formatTitle tests', () => {
     expect(typeof formattedTitle).toBe('string')
   })
 
-  
+  test('formatTitle should format title correctly', () => {
+    let formattedTitle = formatTitle(testData.title)
+    expect(formattedTitle).toBe('Nulla Ac')
+  })  
 
+})
+
+describe ('shortenBio tests', () => {
+  let shortBio = shortenBio(testData.bio)
+  test ('shortenBio will return a smaller Bio string')
 })
