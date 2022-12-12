@@ -15,3 +15,25 @@ let testData = {
     floor: 5,
     roomNumber: 3
   }
+
+  //checking to see if jest is setup
+test('test function', () => {
+  expect(2).toBe(2)
+})
+
+//checking to see if we can access our data
+test('first name should be patten', () => {
+  expect(testData.firstName).toBe('Patten')
+})
+
+//describe block to group tests for formatTitle function
+describe('formatTitle tests', () => {
+
+  test('formatTitle should return a string', () => {
+    let formattedTitle = formatTitle(testData.title)
+    expect(typeof formattedTitle).toBe('string')
+  })
+
+  
+
+})
